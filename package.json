@@ -1,0 +1,45 @@
+{
+  "name": "@altipla/grpc-transport",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "GRPC transport for Typescript.",
+  "main": "dist/index.js",
+  "scripts": {
+    "lint": "tsc --noEmit && eslint --ext .ts src",
+    "fix": "eslint --fix --ext .ts src",
+    "prepublishOnly": "tsc",
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/altipla-consulting/grpc-transport.git"
+  },
+  "author": "Altipla Consulting",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/altipla-consulting/grpc-transport/issues"
+  },
+  "homepage": "https://github.com/altipla-consulting/grpc-transport#readme",
+  "devDependencies": {
+    "@altipla/eslint-config-ts": "^0.2.0",
+    "@protobuf-ts/plugin": "^2.0.2",
+    "@protobuf-ts/runtime": "*",
+    "@types/lodash-es": "^4.17.4",
+    "@typescript-eslint/eslint-plugin": "^4.30.0",
+    "@typescript-eslint/parser": "^4.30.0",
+    "eslint": "^7.32.0",
+    "google-proto-files": "^2.4.0",
+    "lodash-es": "*",
+    "typescript": "^4.4.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "@protobuf-ts/runtime": "^2.0.2",
+    "lodash-es": "^4.17.21"
+  },
+  "files": [
+    "dist"
+  ]
+}
