@@ -4,7 +4,7 @@ import { HttpRule } from './protos/google/api/http'
 import { readMethodOption } from '@protobuf-ts/runtime-rpc'
 import { isFunction, isObject } from 'lodash-es'
 import { StatusCode } from './status-code'
-import { buildURL } from 'binding'
+import { buildURL } from './binding'
 
 
 export interface TransportConfig {

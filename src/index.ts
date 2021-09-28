@@ -1,4 +1,4 @@
 
-export { Transport } from './transport.js'
-export type { TransportConfig } from './transport.js'
-export { StatusCode } from './status-code.js'
+export { Transport } from './transport'
+export type { TransportConfig } from './transport'
+export { StatusCode } from './status-code'
