@@ -166,9 +166,7 @@ export function buildURL(template: string, params: { [key: string]: string }): s
         throw new Error(`input parameter ${segment.variable.name} is required`)
       }
 
-      let value = params[segment.variable.name]
-      delete params[segment.variable.name]
-      return value
+      return params[segment.variable.name]
     }
     return segment.content
   })
