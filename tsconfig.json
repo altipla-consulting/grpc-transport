@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
     "outDir": "dist",
-    "target": "esnext",
-    "module": "esnext",
+    "target": "es2019",
+    "module": "es2020",
     "strict": true,
     "moduleResolution": "node",
     "isolatedModules": true,

@@ -4,6 +4,8 @@ import { HttpRule } from './protos/google/api/http'
 import { readMethodOption } from '@protobuf-ts/runtime-rpc'
 import { isFunction, isObject } from 'lodash-es'
 import { StatusCode } from './status-code'
+import { buildURL } from 'binding'
+
 
 export interface TransportConfig {
   server: string
@@ -33,7 +35,7 @@ export class Transport implements RpcTransport {
       throw new Error(`method is not binding to HTTP requests: ${method.service.typeName}.${method.name}`)
     }
 
-    let path = getPath(rule)
+    let path = buildURL(getPath(rule), input as any)
 
     // Build the full URL we will request with the host from the options
     // and the path from the replaced bindings we receive.

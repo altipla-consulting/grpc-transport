@@ -8,7 +8,8 @@
     "lint": "tsc --noEmit && eslint --ext .ts src",
     "fix": "eslint --fix --ext .ts src",
     "prepublishOnly": "tsc",
-    "test": ""
+    "test": "ava",
+    "watch": "ava --watch"
   },
   "repository": {
     "type": "git",
@@ -27,9 +28,11 @@
     "@types/lodash-es": "^4.17.4",
     "@typescript-eslint/eslint-plugin": "^4.30.0",
     "@typescript-eslint/parser": "^4.30.0",
+    "ava": "^4.0.0-alpha.2",
     "eslint": "^7.32.0",
     "google-proto-files": "^2.4.0",
     "lodash-es": "*",
+    "ts-node": "^10.2.1",
     "typescript": "^4.4.2"
   },
   "publishConfig": {
@@ -41,5 +44,15 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "ava": {
+    "extensions": {
+      "ts": "module"
+    },
+    "nodeArguments": [
+      "--loader=ts-node/esm",
+      "--no-warnings",
+      "--experimental-specifier-resolution=node"
+    ]
+  }
 }
