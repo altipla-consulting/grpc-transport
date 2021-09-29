@@ -1,6 +1,6 @@
 {
   "name": "@altipla/grpc-transport",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "type": "module",
   "description": "GRPC transport for Typescript.",
   "main": "dist/index.js",
