@@ -54,7 +54,7 @@ export class Transport implements RpcTransport {
     } as any
 
     let req = method.I.toJson(input, options.jsonOptions)
-    if (rule.responseBody) {
+    if (rule.body) {
       opts.body = JSON.stringify(req || {})
     } else {
       let qs = req ? flat({}, req) : {}
